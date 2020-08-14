@@ -1,5 +1,8 @@
+#given a square matrix arr,
+#find the absolute difference
+#between the first diagonal and second diagonal
+
 def diagonalDifference(arr):
-    # Write your code here
     firstDiag = 0
     secondDiag = 0
 
