@@ -5,13 +5,11 @@
 def diagonalDifference(arr):
     firstDiag = 0
     secondDiag = 0
+    length = len(arr)
 
     for row in range(len(arr)):
-        for col in range(len(arr[0])):
-            if col==row:
-                firstDiag += arr[row][col]
-            if col+row == len(arr)-1:
-                secondDiag += arr[row][col]
+        firstDiag += arr[row][row]
+        secondDiag += arr[row][length-1-row]
     
     return abs(firstDiag-secondDiag)
 
