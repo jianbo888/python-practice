@@ -1,9 +1,9 @@
 def miniMaxSum(arr):
     #given 5 positive integers, find the min/max sums of 4
 
+    sumOfArr = sum(arr)
+    minSum = sumOfArr
     maxSum = 0
-    minSum = sum(arr)
-    sumOfArr = minSum
 
     for i in range(5):
         currentSum = sumOfArr - arr[i]
@@ -13,6 +13,6 @@ def miniMaxSum(arr):
         if currentSum > maxSum:
             maxSum = currentSum
 
-    print(minSum, maxSum)
+    return minSum, maxSum
 
-miniMaxSum([10, 50, 3, 0, 5])
+print(miniMaxSum([10, 50, 3, 0, 5]))
